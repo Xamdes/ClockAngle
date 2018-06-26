@@ -7,8 +7,11 @@
 ## Specifications
 
   * Clock Angle
-    * Divide 360 by 12 for hours
-    * Divide by 60 for degrees in minutes
+    * Divide 360 by 12 for hours (30 Degrees an hour)
+    * Divide again by 60 for degrees in minutes (0.5 Degrees a minute)
+    * Multiply hour by Degrees an hour
+    * Multiply minutes by Degrees a minute
+    * Check for military time
 
 ## License
 
