@@ -90,5 +90,19 @@ namespace ClockAngle.Tests
       Clock clock = new Clock(5,23);
       Assert.AreEqual(12, clock.GetDegreeDifference());
     }
+    [TestMethod]
+    public void Return_Degree_Diffrence_12_59_True()
+    {
+      //Eventual Tests
+      Clock clock = new Clock(12,59);
+      Assert.AreEqual(6, clock.GetDegreeDifference());
+    }
+    [TestMethod]
+    public void Return_Degree_Diffrence_12_01_True()
+    {
+      //Eventual Tests
+      Clock clock = new Clock(12,1);
+      Assert.AreEqual(6, clock.GetDegreeDifference());
+    }
   }
 }

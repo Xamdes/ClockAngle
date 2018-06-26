@@ -3,12 +3,13 @@
 ## Author(s)
 
   * Steven Colburn
+  * Alex Bunnell
 
 ## Specifications
 
   * Clock Angle
-    * Divide 360 by 12 for hours (30 Degrees an hour)
-    * Divide again by 60 for degrees in minutes (0.5 Degrees a minute)
+    * 30 Degrees per hour
+    * 6 Degrees per Minute
     * Multiply hour by Degrees an hour
     * Multiply minutes by Degrees a minute
     * Check for military time
