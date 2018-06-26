@@ -7,6 +7,8 @@
 ## Specifications
 
   * Clock Angle
+    * Divide 360 by 12 for hours
+    * Divide by 60 for degrees in minutes
 
 ## License
 
