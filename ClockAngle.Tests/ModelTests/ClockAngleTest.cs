@@ -34,5 +34,19 @@ namespace ClockAngle.Tests
       Clock clock = new Clock(0,2);
       Assert.AreEqual(2, clock.GetMinutes());
     }
+    [TestMethod]
+    public void Return_Hour_10_Min_2_True()
+    {
+      //Eventual Tests
+      Clock clock = new Clock(10,2);
+      Assert.AreEqual(302, clock.GetMinutes());
+    }
+    [TestMethod]
+    public void Return_Military_Hour_10_Min_2_True()
+    {
+      //Eventual Tests
+      Clock clock = new Clock(22,2);
+      Assert.AreEqual(302, clock.GetMinutes());
+    }
   }
 }
