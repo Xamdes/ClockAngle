@@ -41,16 +41,14 @@ namespace ClockAngle
 
     public double GetDegrees()
     {
-      const double degreeHours = 30;
+      const double degreeHours = 30.0;
       const double degreeMinutes = 0.5;
 
       if(_hours >= 12)
       {
-        _hours -=12;
+        _hours -= 12;
       }
-      double degrees = ((_hours*degreeHours)+(_minutes*degreeMinutes));
-      return degrees;
-
+      return ((_hours*degreeHours)+(_minutes*degreeMinutes));
     }
   }
 }
