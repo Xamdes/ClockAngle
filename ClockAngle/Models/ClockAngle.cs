@@ -21,6 +21,10 @@ namespace ClockAngle
     {
       _hours = hours;
       _minutes = minutes;
+      if(_hours >= 12)
+      {
+        _hours -= 12;
+      }
     }
 
     public int GetHours()
@@ -37,18 +41,38 @@ namespace ClockAngle
     {
       _hours = hours;
       _minutes = minutes;
+      if(_hours >= 12)
+      {
+        _hours -= 12;
+      }
     }
 
     public double GetDegrees()
     {
       const double degreeHours = 30.0;
       const double degreeMinutes = 0.5;
-
-      if(_hours >= 12)
-      {
-        _hours -= 12;
-      }
       return ((_hours*degreeHours)+(_minutes*degreeMinutes));
+    }
+
+    public double GetDegreeMinutes()
+    {
+      const double degreeMinutes = 6;
+      return (_minutes*degreeMinutes);
+    }
+
+    public double GetDegreeDifference()
+    {
+      const double degreeHours = 30.0;
+      const double degreeMinutes = 6.0;
+
+      double hourLoc = _hours*degreeHours;
+      double minuteLoc = _minutes*degreeMinutes;
+      double returnValue = Math.Abs(hourLoc - minuteLoc);
+      if(returnValue > 180)
+      {
+        returnValue = 360 - returnValue;
+      }
+      return returnValue;
     }
   }
 }
