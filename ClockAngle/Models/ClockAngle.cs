@@ -62,12 +62,7 @@ namespace ClockAngle
 
     public double GetDegreeDifference()
     {
-      const double degreeHours = 30.0;
-      const double degreeMinutes = 6.0;
-
-      double hourLoc = _hours*degreeHours;
-      double minuteLoc = _minutes*degreeMinutes;
-      double returnValue = Math.Abs(hourLoc - minuteLoc);
+      double returnValue = Math.Abs((_hours*30.0) - (_minutes*6.0));
       if(returnValue > 180)
       {
         returnValue = 360 - returnValue;
